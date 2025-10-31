@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - My Best AI Tools Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+      color: #000;
+    }
+
+    header {
+      background: #111;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff00ff;
+    }
+
+    /* Hero Section */
+    #about-hero {
+      text-align: center;
+      padding: 100px 20px;
+      color: #000;
+      background: linear-gradient(135deg, rgba(255,0,255,0.1), rgba(0,255,255,0.1));
+      border-radius: 15px;
+      margin: 40px;
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.2), inset 0 0 30px rgba(0, 255, 255, 0.1);
+      animation: glowHero 8s infinite alternate ease-in-out;
+    }
+
+    @keyframes glowHero {
+      0% { box-shadow: 0 0 20px #ff00ff, inset 0 0 15px #00ffff; }
+      100% { box-shadow: 0 0 40px #00ffff, inset 0 0 25px #ff00ff; }
+    }
+
+    #about-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #000;
+      text-shadow: 0 0 5px #ff00ff3b;
+    }
+
+    #about-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #222;
+    }
+
+    /* Mission Section */
+    #mission {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 30px;
+      padding: 50px 20px;
+    }
+
+    .mission-card {
+      flex: 1 1 320px;
+      background: #fff;
+      border: 2px solid transparent;
+      border-image: linear-gradient(90deg, #ff00ff, #00ffff);
+      border-image-slice: 1;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      color: #000;
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.2);
+      transition: 0.4s;
+    }
+
+    .mission-card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 30px #00ffff, 0 0 25px #ff00ff inset;
+    }
+
+    .mission-card i {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #ff00ff;
+    }
+
+    .mission-card h2 {
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .mission-card p {
+      color: #333;
+    }
+
+    /* Team Section */
+    #team {
+      text-align: center;
+      padding: 60px 20px;
+      background: #fafafa;
+      border-radius: 15px;
+      margin: 30px;
+    }
+
+    #team h2 {
+      color: #111;
+      text-shadow: 0 0 10px #ff00ff2e;
+      margin-bottom: 40px;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .team-member {
+      width: 260px;
+      padding: 20px;
+      border-radius: 20px;
+      background: #fff;
+      border: 2px solid transparent;
+      border-image: linear-gradient(135deg, #ff00ff, #00ffff);
+      border-image-slice: 1;
+      transition: all 0.4s ease;
+      color: #000;
+      box-shadow: 0 0 20px rgba(255,0,255,0.2);
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 40px #00ffff;
+    }
+
+    .team-member img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .team-member h3 {
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .team-member p {
+      color: #333;
+      font-size: 0.9rem;
+    }
+
+    /* CTA Section */
+    #cta {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(90deg, rgba(255,0,255,0.1), rgba(0,255,255,0.1));
+      border-radius: 15px;
+      margin: 40px;
+      box-shadow: 0 0 25px rgba(255,0,255,0.2);
+    }
+
+    #cta h2 {
+      color: #000;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #cta .cta-btn {
+      border: 2px solid #ff00ff;
+      padding: 12px 25px;
+      border-radius: 10px;
+      color: #000;
+      background: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px #ff00ff4f;
+    }
+
+    #cta .cta-btn:hover {
+      background: linear-gradient(90deg, #ff00ff, #00ffff);
+      color: #000;
+      box-shadow: 0 0 25px #00ffff;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    footer ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+      padding: 0;
+    }
+
+    footer ul li a {
+      color: #00ffff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    footer ul li a:hover {
+      color: #ff00ff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about-hero">
+      <h1>About Our AI Tools Platform</h1>
+      <p>Welcome to <strong>My Best Website</strong>, your all-in-one destination for powerful, free, and user-friendly AI tools. We help creators, developers, and entrepreneurs work smarter, faster, and better with innovative online solutions.</p>
+    </section>
+
+    <section id="mission">
+      <div class="mission-card">
+        <i class="fas fa-bullseye"></i>
+        <h2>Our Mission</h2>
+        <p>To make artificial intelligence accessible to everyone by providing easy-to-use tools that enhance creativity, productivity, and innovation.</p>
+      </div>
+
+      <div class="mission-card">
+        <i class="fas fa-eye"></i>
+        <h2>Our Vision</h2>
+        <p>To become the world’s leading AI platform that empowers millions of people to transform ideas into reality with the power of technology.</p>
+      </div>
+
+      <div class="mission-card">
+        <i class="fas fa-heart"></i>
+        <h2>Our Values</h2>
+        <p>Innovation, transparency, and trust. We believe in creating tools that truly help and inspire our users worldwide.</p>
+      </div>
+    </section>
+
+    <section id="team">
+      <h2>🌟 Meet Our Creative Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://i.ibb.co/qmqQyVJ/avatar1.jpg" alt="Team Member 1">
+          <h3>Kashif Khan</h3>
+          <p>Founder & Lead Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="https://i.ibb.co/1Jm6p8t/avatar2.jpg" alt="Team Member 2">
+          <h3>Ayesha Noor</h3>
+          <p>UI/UX Designer</p>
+        </div>
+        <div class="team-member">
+          <img src="https://i.ibb.co/QnM7KJt/avatar3.jpg" alt="Team Member 3">
+          <h3>Ali Raza</h3>
+          <p>AI Research & Data Analyst</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <h2>🚀 Explore the Future of AI Today!</h2>
+      <button class="cta-btn" onclick="window.location.href='tools.html'">Try Our Free Tools</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>My Best Website</h2>
+            <p>Explore 1000+ Free & Trending AI Tools for creators, coders, and designers.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="about.html">ℹ️ About</a></li>
+                <li><a href="tools.html">🧠 Tools</a></li>
+                <li><a href="contact.html">📞 Contact</a></li>
+                <li><a href="privacy.html">🔒 Privacy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 My Best Website. All Rights Reserved.</p>
+        <small>Designed for AdSense | Optimized by <a href="#">SEO Smart Engine</a></small>
+    </div>
+</footer>
+
+</body>
+</html>

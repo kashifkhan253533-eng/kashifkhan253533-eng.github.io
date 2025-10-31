@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Best Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section with Video Background -->
+        <section id="hero">
+            <video autoplay muted loop id="heroVideo">
+                <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <i class="fas fa-rocket fa-5x" style="color: #ff00ff; animation: rocketLaunch 3s infinite;"></i>
+                    <h1>AI Tools Explosion! 💥</h1>
+                    <p>Watch the magic happen – likes, users, and online soaring!</p>
+                    <a href="tools.html" class="cta-button">Explore Now <i class="fas fa-bolt"></i></a>
+                    <button id="likeBtn" class="like-button"><i class="fas fa-heart"></i> Likes: <span id="likeCount">1200</span></button>
+                    <button id="shareBtn" class="share-button"><i class="fas fa-share"></i> Share</button>
+                </div>
+                <div id="particles"></div> <!-- Floating particles -->
+            </div>
+        </section>
+        
+        <!-- Engagement Meter -->
+        <section id="engagement">
+            <h2>Engagement Level</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p>Watch it rise as more people join!</p>
+        </section>
+        
+        <!-- Live Stats Section -->
+        <section id="stats">
+            <h2>Live Stats! 🔥</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-tools fa-3x" style="color: #ff00ff; animation: spin 2s infinite;"></i>
+                    <h3>1000+ Tools</h3>
+                    <p>Curated AI tools for every need.</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users fa-3x" style="color: #00ff00; animation: bounce 2s infinite;"></i>
+                    <h3>Users: <span id="userCount">1000000</span></h3>
+                    <p>Join a growing community.</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star fa-3x" style="color: #ffff00; animation: pulse 2s infinite;"></i>
+                    <h3>5-Star Rated</h3>
+                    <p>Trusted by creators worldwide.</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-eye fa-3x" style="color: #0080ff;"></i>
+                    <h3>Online: <span id="onlineCount">500</span></h3>
+                    <p>Live users right now!</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Tools Carousel -->
+        <section id="featured-tools">
+            <h2>Featured AI Tools <i class="fas fa-fire" style="color: #ff5722; animation: flicker 1s infinite;"></i></h2>
+            <p>Swipe to discover – more coming soon!</p>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="tool-card">
+                            <img src="https://cdn.openai.com/chatgpt/images/chatgpt-logo.png" alt="ChatGPT Logo" class="tool-image">
+                            <h3><a href="https://chat.openai.com/" target="_blank">ChatGPT (OpenAI) <i class="fas fa-external-link-alt"></i></a></h3>
+                            <p>Advanced AI chat & writing assistant.</p>
+                            <span class="tag trending">Trending</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="tool-card">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Claude AI" class="tool-image">
+                            <h3><a href="https://claude.ai/" target="_blank">Claude (Anthropic) <i class="fas fa-external-link-alt"></i></a></h3>
+                            <p>Natural language reasoning & summarization.</p>
+                            <span class="tag">Smart</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="tool-card">
+                            <img src="https://images.unsplash.com/photo-1541963463532-d68292c34d19?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Midjourney Art" class="tool-image">
+                            <h3><a href="https://www.midjourney.com/" target="_blank">Midjourney <i class="fas fa-external-link-alt"></i></a></h3>
+                            <p>Text-to-image art generation.</p>
+                            <span class="tag creative">Creative</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="tool-card">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="DALL·E 3" class="tool-image">
+                            <h3><a href="https://openai.com/dall-e-3/" target="_blank">DALL·E 3 (OpenAI) <i class="fas fa-external-link-alt"></i></a></h3>
+                            <p>Image generation & editing.</p>
+                            <span class="tag">Innovative</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                </div>
+            </div>
+        </section>
+
+           <!-- Testimonial -->
+        <section id="testimonial">
+            <blockquote>
+                "Unbelievable! Counters keep climbing – share it now!" – <strong>Sam Lee, Enthusiast</strong>
+            </blockquote>
+        </section>
+    </main>
+    
+    <footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>My Best Website</h2>
+            <p>Explore 1000+ Free & Trending AI Tools for creators, coders, and designers.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="about.html">ℹ️ About</a></li>
+                <li><a href="tools.html">🧠 Tools</a></li>
+                <li><a href="contact.html">📞 Contact</a></li>
+                <li><a href="privacy.html">🔒 Privacy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 My Best Website. All Rights Reserved.</p>
+        <small>Designed for AdSense | Optimized by <a href="#">SEO Smart Engine</a></small>
+    </div>
+</footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
