@@ -7,9 +7,67 @@
     <title>My Best Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
+    <!-- Google CMP for GDPR / EEA / UK / Switzerland -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=ca-pub-1761625320298607"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Default consent denied until user gives it
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+      });
+
+      // Listen for user's consent
+      function handleConsent(consent) {
+        if (consent === 'accept') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+          });
+        }
+      }
+    </script>
 </head>
 <body>
+    <!-- Simple Consent Banner -->
+    <div id="consent-banner">
+      <span>We use cookies to improve your experience and show personalized ads. By clicking "Consent", you agree to our use of cookies.</span>
+      <div>
+        <button onclick="handleConsent('accept'); document.getElementById('consent-banner').style.display='none';">Consent</button>
+        <button onclick="document.getElementById('consent-banner').style.display='none';">Manage</button>
+      </div>
+    </div>
+
+    <style>
+      #consent-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        color: #fff;
+        padding: 15px;
+        z-index: 9999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+      #consent-banner button {
+        margin-left: 10px;
+        padding: 8px 12px;
+        background: #ff9900;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+    </style>
+
     <header>
         <nav>
             <ul>
@@ -38,7 +96,7 @@
                     <button id="likeBtn" class="like-button"><i class="fas fa-heart"></i> Likes: <span id="likeCount">1200</span></button>
                     <button id="shareBtn" class="share-button"><i class="fas fa-share"></i> Share</button>
                 </div>
-                <div id="particles"></div> <!-- Floating particles -->
+                <div id="particles"></div>
             </div>
         </section>
         
@@ -77,7 +135,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Featured Tools Carousel -->
         <section id="featured-tools">
             <h2>Featured AI Tools <i class="fas fa-fire" style="color: #ff5722; animation: flicker 1s infinite;"></i></h2>
@@ -126,7 +184,7 @@
             </div>
         </section>
 
-           <!-- Testimonial -->
+        <!-- Testimonial -->
         <section id="testimonial">
             <blockquote>
                 "Unbelievable! Counters keep climbing – share it now!" – <strong>Sam Lee, Enthusiast</strong>
@@ -135,49 +193,44 @@
     </main>
     
     <footer>
-    <div class="footer-container">
-        <div class="footer-logo">
-            <h2>My Best Website</h2>
-            <p>Explore 1000+ Free & Trending AI Tools for creators, coders, and designers.</p>
-        </div>
-
-        <div class="footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="about.html">ℹ️ About</a></li>
-                <li><a href="tools.html">🧠 Tools</a></li>
-                <li><a href="contact.html">📞 Contact</a></li>
-                <li><a href="privacy.html">🔒 Privacy</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-social">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>My Best Website</h2>
+                <p>Explore 1000+ Free & Trending AI Tools for creators, coders, and designers.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="about.html">ℹ️ About</a></li>
+                    <li><a href="tools.html">🧠 Tools</a></li>
+                    <li><a href="contact.html">📞 Contact</a></li>
+                    <li><a href="privacy.html">🔒 Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
         </div>
-
-        <div class="footer-newsletter">
-            <h3>Stay Updated</h3>
-            <form id="newsletterForm">
-                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
+        <div class="footer-bottom">
+            <p>&copy; 2025 My Best Website. All Rights Reserved.</p>
+            <small>Designed for AdSense | Optimized by <a href="#">SEO Smart Engine</a></small>
         </div>
-    </div>
+    </footer>
 
-    <div class="footer-bottom">
-        <p>&copy; 2025 My Best Website. All Rights Reserved.</p>
-        <small>Designed for AdSense | Optimized by <a href="#">SEO Smart Engine</a></small>
-    </div>
-</footer>
-
-    
     <script src="script.js"></script>
 </body>
 </html>
