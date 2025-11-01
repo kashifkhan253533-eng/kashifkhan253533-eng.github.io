@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kashifkhan253533-eng.github.io/sitemap.xml
