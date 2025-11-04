@@ -1,273 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🔥 Top 20 AI Tools - My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top 20 AI Tools 2025 | My Best Website</title>
+  <meta name="description" content="Discover 20+ best AI tools for writing, design, video, coding, and productivity in 2025. Search, explore, and find the most powerful AI software for your needs.">
+  <meta name="keywords" content="AI tools, best AI tools, free AI tools, ChatGPT, Midjourney, Claude, Jasper, Canva AI, AI software 2025">
+  <meta name="google-adsense-account" content="ca-pub-1761625320298607">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    /* ==== Global Styles ==== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "Poppins", sans-serif;
-      background: #0d001a;
       color: #fff;
-      margin: 0;
-      padding: 0;
-      position: relative;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat fixed;
       overflow-x: hidden;
+      position: relative;
     }
 
-    /* ==== Animated Gradient Border ==== */
-    body::before {
+    body::after {
       content: "";
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, #ff00cc, #8e2de2, #4a00e0, #00c6ff);
-      background-size: 400% 400%;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
       z-index: -1;
-      animation: borderGlow 10s ease infinite;
-      filter: blur(40px);
-      opacity: 0.7;
     }
 
-    @keyframes borderGlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
+    /* ===== Header ===== */
     header {
-      background: rgba(20, 0, 50, 0.9);
-      padding: 15px 0;
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
-      border-bottom: 2px solid #8e2de2;
+      background: rgba(10, 0, 40, 0.85);
       text-align: center;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(0,255,255,0.3);
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(8px);
     }
 
-    header nav ul {
+    nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 25px;
-      margin: 0;
-      padding: 0;
     }
 
-    header nav a {
+    nav a {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
       transition: 0.3s;
     }
 
-    header nav a:hover {
-      color: #ffcc00;
-      text-shadow: 0 0 10px #ffcc00;
+    nav a:hover, nav a.active {
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    /* ===== Title & Search ===== */
+    .container {
+      text-align: center;
+      padding: 80px 20px;
     }
 
     h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-top: 30px;
-      background: linear-gradient(90deg, #ff00cc, #8e2de2, #4a00e0);
+      font-size: 2.6rem;
+      background: linear-gradient(90deg, #00ffff, #ff00ff);
       -webkit-background-clip: text;
       color: transparent;
-      text-shadow: 0 0 20px rgba(255,255,255,0.2);
+      text-shadow: 0 0 20px rgba(255,255,255,0.1);
     }
 
     p.subtitle {
-      text-align: center;
       color: #ccc;
+      max-width: 700px;
+      margin: 15px auto 40px;
       font-size: 1.1rem;
+      line-height: 1.6;
     }
 
-    #searchBar {
-      width: 90%;
-      max-width: 450px;
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    input, select {
       padding: 12px 15px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 8px;
-      border: 2px solid #8e2de2;
-      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
       outline: none;
-      background: #15002b;
-      color: white;
-      box-shadow: 0 0 15px rgba(142, 45, 226, 0.3);
+      font-size: 1rem;
+      width: 250px;
+      transition: 0.3s;
     }
 
-    #searchBar:focus {
-      border-color: #ff00cc;
-      box-shadow: 0 0 25px rgba(255, 0, 204, 0.5);
+    input:focus, select:focus {
+      box-shadow: 0 0 15px rgba(0,255,255,0.4);
     }
 
-    main {
-      background: rgba(255, 255, 255, 0.05);
-      border: 2px solid rgba(255,255,255,0.1);
-      border-radius: 20px;
-      max-width: 1300px;
-      margin: 40px auto;
-      padding: 30px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 25px rgba(255, 0, 255, 0.2);
-    }
-
-    /* ==== Tools Grid ==== */
-    .tools-grid {
+    /* ===== Tools Grid ===== */
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .tool-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 2px solid transparent;
-      border-radius: 16px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 15px;
       padding: 25px;
       text-align: center;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 0 10px rgba(142, 45, 226, 0.2);
-      transition: 0.4s ease;
+      transition: 0.4s;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 0 25px rgba(255,0,255,0.1);
+      backdrop-filter: blur(6px);
     }
 
     .tool-card:hover {
-      transform: translateY(-10px) scale(1.03);
-      border-image: linear-gradient(90deg, #ff00cc, #8e2de2, #4a00e0) 1;
-      box-shadow: 0 0 25px rgba(142, 45, 226, 0.6);
+      transform: translateY(-8px);
+      border-color: #00ffff;
+      box-shadow: 0 0 30px rgba(0,255,255,0.4);
     }
 
     .tool-card img {
-      width: 110px;
-      height: 110px;
+      width: 90px;
+      height: 90px;
       object-fit: contain;
-      border-radius: 12px;
       background: #fff;
+      border-radius: 10px;
       padding: 10px;
-      margin-bottom: 15px;
-      transition: 0.3s;
     }
 
-    .tool-card:hover img {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(255, 0, 204, 0.6);
-    }
+    .tool-card h3 { margin: 12px 0; color: #fff; }
+    .tool-card p { color: #ccc; font-size: 0.95rem; min-height: 60px; }
 
-    .tool-card h2 a {
-      color: #ffccff;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-
-    .tool-card h2 a:hover {
-      color: #fff;
-      text-shadow: 0 0 10px #ff00cc;
-    }
-
-    .tool-card p {
-      font-size: 0.95rem;
+    .features {
+      display: none;
+      text-align: left;
+      background: rgba(0,0,0,0.4);
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-top: 10px;
+      font-size: 0.9rem;
       color: #ddd;
-      margin-top: 8px;
+    }
+
+    .features ul { margin-left: 18px; }
+
+    .toggle-btn, .visit-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .toggle-btn {
+      background: linear-gradient(90deg, #00ffff, #ff00ff);
+      color: #000;
+    }
+
+    .visit-btn {
+      background: linear-gradient(90deg, #ffcc00, #ff6600);
+      color: #000;
+      margin-left: 8px;
+    }
+
+    .toggle-btn:hover, .visit-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
     }
 
     footer {
+      background: rgba(10, 0, 40, 0.85);
       text-align: center;
-      background: rgba(20, 0, 50, 0.9);
-      color: #fff;
-      padding: 25px 0;
-      border-top: 2px solid #8e2de2;
-      box-shadow: 0 -5px 25px rgba(142, 45, 226, 0.4);
-    }
-
-    footer ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 0;
-      margin-top: 10px;
+      color: #bbb;
+      padding: 40px 10px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 60px;
     }
 
     footer a {
-      color: #ffccff;
+      color: #00ffff;
       text-decoration: none;
+      transition: 0.3s;
     }
 
     footer a:hover {
       color: #fff;
-      text-shadow: 0 0 8px #ff00cc;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      input, select { width: 90%; }
     }
   </style>
 </head>
+
 <body>
   <header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="tools.html">Tools</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="tools.html" class="active">🧠 Tools</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+        <li><a href="contact.html">📞 Contact</a></li>
+        <li><a href="privacy.html">🔒 Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <div class="container">
+    <h1>💡 Explore Top 20 AI Tools</h1>
+    <p class="subtitle">Discover the best free and premium AI tools for writers, designers, developers, and creators — all in one place.</p>
 
-  <main>
-    <h1>🌟 Top 20 AI Tools</h1>
-    <p class="subtitle">Explore a curated list of the best AI tools for chat, design, video, and code.</p>
-
-    <input type="text" id="searchBar" placeholder="🔍 Search tools...">
-
-    <div class="tools-grid">
-      <!-- === 20 TOOLS === -->
-      <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"><h2><a href="https://chat.openai.com/">ChatGPT (OpenAI)</a></h2><p>Advanced AI chat & writing assistant.</p></div>
-      <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg"><h2><a href="https://claude.ai/">Claude (Anthropic)</a></h2><p>Natural language reasoning & summarization.</p></div>
-      <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"><h2><a href="https://gemini.google.com/">Gemini (Google)</a></h2><p>AI model for research, coding & image tasks.</p></div>
-      <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg"><h2><a href="https://www.perplexity.ai/">Perplexity AI</a></h2><p>AI-powered research & web search tool.</p></div>
-      <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg"><h2><a href="https://www.notion.so/product/ai">Notion AI</a></h2><p>Smart note-taking & content generation.</p></div>
-      <div class="tool-card"><img src="https://images.seeklogo.com/logo-png/47/1/jasper-logo-png_seeklogo-472363.png"><h2><a href="https://www.jasper.ai/">Jasper AI</a></h2><p>Copywriting & marketing content generator.</p></div>
-      <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Logo_of_the_company_WriteSonic.jpg"><h2><a href="https://writesonic.com/">Writesonic / Sonic AI</a></h2><p>Blog & ad copy automation.</p></div>
-      <div class="tool-card"><img src="https://files.readme.io/ed991b4-Logo-Primary-Indigo.svg"><h2><a href="https://www.synthesia.io/">Synthesia</a></h2><p>AI video generation with avatars.</p></div>
-      <div class="tool-card"><img src="https://www.toolpilot.ai/cdn/shop/files/e94c6b5d6b0975bbd31bb61c072af054.jpg"><h2><a href="https://www.pika.art/">Pika Labs</a></h2><p>Text-to-video AI tool.</p></div>
-      <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Midjourney_Emblem.svg"><h2><a href="https://www.midjourney.com/">Midjourney</a></h2><p>Text-to-image art generation.</p></div>
-      <div class="tool-card"><img src="https://thinglabs.io/wp-content/uploads/dall-e-logo1.png"><h2><a href="https://openai.com/dall-e-3/">DALL·E 3 (OpenAI)</a></h2><p>Image generation & editing.</p></div>
-      <div class="tool-card"><img src="https://images.seeklogo.com/logo-png/49/1/runway-logo-png_seeklogo-496519.png"><h2><a href="https://runwayml.com/">Runway ML</a></h2><p>Video editing & AI video generation.</p></div>
-      <div class="tool-card"><img src="https://assets.stickpng.com/images/66b21b1a0d87de951a125c3c.png"><h2><a href="https://elevenlabs.io/">ElevenLabs</a></h2><p>Realistic AI voice generation.</p></div>
-      <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Descript_%28Icon%29.svg"><h2><a href="https://www.descript.com/">Descript</a></h2><p>Video editing using text interface.</p></div>
-      <div class="tool-card"><img src="https://logotyp.us/file/replit.svg"><h2><a href="https://replit.com/ghostwriter">Replit Ghostwriter</a></h2><p>AI coding assistant.</p></div>
-      <div class="tool-card"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-copilot-icon.png"><h2><a href="https://github.com/features/copilot">GitHub Copilot</a></h2><p>Code completion & pair programming.</p></div>
-      <div class="tool-card"><img src="https://mma.prnewswire.com/media/2561848/Murf_AI_Logo.jpg"><h2><a href="https://murf.ai/">Murf AI</a></h2><p>Voiceover generation for creators.</p></div>
-      <div class="tool-card"><img src="https://static-cse.canva.com/blob/1177378/Canva_AI_Magic_Studio.png"><h2><a href="https://www.canva.com/magic-studio/">Canva Magic Studio</a></h2><p>AI-powered design & editing.</p></div>
-      <div class="tool-card"><img src="https://brandlogos.net/wp-content/uploads/2025/05/leonardo_ai-logo_brandlogos.net_ctjsa.png"><h2><a href="https://leonardo.ai/">Leonardo AI</a></h2><p>Game & art asset generation.</p></div>
-      <div class="tool-card"><img src="https://cdn-public.softwarereviews.com/production/logos/offerings/11635/original/HeyGen_logo.png"><h2><a href="https://www.heygen.com/">HeyGen</a></h2><p>AI video avatars for marketing.</p></div>
+    <div class="filters">
+      <input type="text" id="search" placeholder="🔍 Search AI tools...">
+      <select id="category">
+        <option value="all">All Categories</option>
+        <option value="writing">Writing</option>
+        <option value="design">Design</option>
+        <option value="video">Video</option>
+        <option value="coding">Coding</option>
+        <option value="voice">Voice</option>
+        <option value="productivity">Productivity</option>
+      </select>
     </div>
-  </main>
+
+    <div class="grid" id="toolList"></div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 My Website. All rights reserved.</p>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Tools</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Privacy</a></li>
-    </ul>
+    <p>&copy; 2025 My Best Website | Designed for AdSense | <a href="#">SEO Smart Engine</a></p>
   </footer>
 
   <script>
-    const searchBar = document.getElementById('searchBar');
-    const cards = document.querySelectorAll('.tool-card');
-    searchBar.addEventListener('input', () => {
-      const text = searchBar.value.toLowerCase();
-      cards.forEach(c => {
-        c.style.display = c.textContent.toLowerCase().includes(text) ? 'block' : 'none';
-      });
+  const tools = [
+    {name:"ChatGPT",desc:"AI chat & writing assistant.",url:"https://chat.openai.com/",img:"https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",cat:"writing",features:["Write blogs, code, and essays.","Summarize and brainstorm ideas."]},
+    {name:"Claude",desc:"AI for reasoning & analysis.",url:"https://claude.ai/",img:"https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg",cat:"writing",features:["Long context understanding.","Human-like explanations."]},
+    {name:"Midjourney",desc:"AI art generation from text.",url:"https://www.midjourney.com/",img:"https://upload.wikimedia.org/wikipedia/commons/2/24/Midjourney_Emblem.svg",cat:"design",features:["Text-to-image creation.","High-quality concept art."]},
+    {name:"DALL·E 3",desc:"Image generation & editing.",url:"https://openai.com/dall-e-3/",img:"https://thinglabs.io/wp-content/uploads/dall-e-logo1.png",cat:"design",features:["AI art creation.","Inpainting & editing."]},
+    {name:"Jasper AI",desc:"AI copywriting assistant.",url:"https://www.jasper.ai/",img:"https://images.seeklogo.com/logo-png/47/1/jasper-logo-png_seeklogo-472363.png",cat:"writing",features:["Social media content.","SEO copy & marketing."]},
+    {name:"Synthesia",desc:"Video generation with avatars.",url:"https://www.synthesia.io/",img:"https://files.readme.io/ed991b4-Logo-Primary-Indigo.svg",cat:"video",features:["AI presenters.","Text-to-video creation."]},
+    {name:"Runway ML",desc:"Creative AI video editing.",url:"https://runwayml.com/",img:"https://images.seeklogo.com/logo-png/49/1/runway-logo-png_seeklogo-496519.png",cat:"video",features:["Background removal.","AI video effects."]},
+    {name:"Canva Magic Studio",desc:"AI design & editing studio.",url:"https://www.canva.com/magic-studio/",img:"https://static-cse.canva.com/blob/1177378/Canva_AI_Magic_Studio.png",cat:"design",features:["Auto design assist.","AI background remover."]},
+    {name:"ElevenLabs",desc:"Realistic AI voice generation.",url:"https://elevenlabs.io/",img:"https://assets.stickpng.com/images/66b21b1a0d87de951a125c3c.png",cat:"voice",features:["Voice cloning.","Text-to-speech narration."]},
+    {name:"Perplexity AI",desc:"AI-powered web search.",url:"https://www.perplexity.ai/",img:"https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg",cat:"productivity",features:["Cited answers.","Summarized web info."]},
+    {name:"Notion AI",desc:"Productivity & notes AI.",url:"https://www.notion.so/product/ai",img:"https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg",cat:"productivity",features:["Smart docs.","Auto writing tools."]},
+    {name:"Murf AI",desc:"Voiceover generation.",url:"https://murf.ai/",img:"https://mma.prnewswire.com/media/2561848/Murf_AI_Logo.jpg",cat:"voice",features:["Studio-quality voice.","Multi-language support."]},
+    {name:"Replit Ghostwriter",desc:"AI coding assistant.",url:"https://replit.com/ghostwriter",img:"https://logotyp.us/file/replit.svg",cat:"coding",features:["Code completion.","Debugging assistant."]},
+    {name:"GitHub Copilot",desc:"AI for developers.",url:"https://github.com/features/copilot",img:"https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-copilot-icon.png",cat:"coding",features:["Auto-complete code.","Learn from GitHub repos."]},
+    {name:"HeyGen",desc:"AI video avatars for marketing.",url:"https://www.heygen.com/",img:"https://cdn-public.softwarereviews.com/production/logos/offerings/11635/original/HeyGen_logo.png",cat:"video",features:["Realistic avatars.","Custom scripts."]},
+    {name:"Leonardo AI",desc:"AI for art & game design.",url:"https://leonardo.ai/",img:"https://brandlogos.net/wp-content/uploads/2025/05/leonardo_ai-logo_brandlogos.net_ctjsa.png",cat:"design",features:["Concept generation.","Texture creation."]},
+    {name:"Writesonic",desc:"AI content writer.",url:"https://writesonic.com/",img:"https://upload.wikimedia.org/wikipedia/en/b/bd/Logo_of_the_company_WriteSonic.jpg",cat:"writing",features:["Blog & ad writing.","AI SEO helper."]},
+    {name:"Descript",desc:"Edit video by text.",url:"https://www.descript.com/",img:"https://upload.wikimedia.org/wikipedia/commons/3/38/Descript_%28Icon%29.svg",cat:"video",features:["Overdub voice.","Text-based editing."]},
+    {name:"Gemini",desc:"Google’s AI for everything.",url:"https://gemini.google.com/",img:"https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg",cat:"writing",features:["Multimodal AI.","Coding + images."]},
+    {name:"Pika Labs",desc:"AI video generator.",url:"https://www.pika.art/",img:"https://www.toolpilot.ai/cdn/shop/files/e94c6b5d6b0975bbd31bb61c072af054.jpg",cat:"video",features:["Text-to-video.","Cinematic quality."]}
+  ];
+
+  const list = document.getElementById("toolList");
+  function displayTools() {
+    const s = document.getElementById("search").value.toLowerCase();
+    const cat = document.getElementById("category").value;
+    list.innerHTML = "";
+    tools.filter(t => (cat === "all" || t.cat === cat) && t.name.toLowerCase().includes(s))
+    .forEach(t => {
+      const c = document.createElement("div");
+      c.className = "tool-card";
+      c.innerHTML = `
+        <img src="${t.img}" alt="${t.name}">
+        <h3>${t.name}</h3>
+        <p>${t.desc}</p>
+        <button class='toggle-btn'>Read More</button>
+        <button class='visit-btn' onclick="window.open('${t.url}','_blank')">Visit Tool</button>
+        <div class='features'><ul>${t.features.map(f => `<li>${f}</li>`).join('')}</ul></div>`;
+      list.appendChild(c);
     });
+  }
+
+  displayTools();
+  document.getElementById("search").oninput = displayTools;
+  document.getElementById("category").onchange = displayTools;
+
+  document.addEventListener("click", e => {
+    if (e.target.classList.contains("toggle-btn")) {
+      const f = e.target.nextElementSibling.nextElementSibling;
+      f.style.display = f.style.display === "block" ? "none" : "block";
+      e.target.textContent = f.style.display === "block" ? "Hide" : "Read More";
+    }
+  });
   </script>
 </body>
 </html>
+ 
