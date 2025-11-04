@@ -1,244 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>My Best Website</title>
-    <meta name="description" content="Explore 1000+ free and trending AI tools for creators, coders, and designers. Discover top AI tools websites today!">
-    <meta name="keywords" content="AI tools, AI tools websites, best AI websites, trending AI tools, AI resources, AI tools online">
-    
-    <!-- Google AdSense -->
-    <meta name="google-adsense-account" content="ca-pub-1761625320298607">
-    
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="google94ff76944902b60e" />
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Galaxy - Discover the Best Free AI Tools 2025 🚀</title>
+  <meta name="description" content="Explore 1000+ powerful AI tools for writing, design, coding, and productivity. AI Tools Galaxy brings you the best free AI platforms in 2025." />
+  <meta name="keywords" content="AI tools, free AI tools, best AI tools 2025, ChatGPT, Midjourney, Claude AI, writing AI, coding AI, image AI" />
+  <meta name="google-adsense-account" content="ca-pub-1761625320298607" />
+  <meta name="google-site-verification" content="google94ff76944902b60e" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712102.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Google CMP for GDPR / EEA / UK / Switzerland -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=ca-pub-1761625320298607"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied'
-      });
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family:"Poppins",sans-serif;
+      background:#050010;
+      color:#fff;
+      overflow-x:hidden;
+    }
 
-      function handleConsent(consent) {
-        if (consent === 'accept') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'analytics_storage': 'granted'
-          });
-        }
-      }
-    </script>
+    /* ===== HEADER ===== */
+    header {
+      background:rgba(0,0,30,0.9);
+      padding:15px 0;
+      border-bottom:1px solid #00ffff50;
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(10px);
+    }
+    nav ul {
+      list-style:none;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:25px;
+      position:relative;
+    }
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s;
+    }
+    nav a:hover, nav a.active {
+      color:#00ffff;
+      text-shadow:0 0 10px #00ffff;
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+      position:relative;
+    }
+    .dropdown-content {
+      display:none;
+      position:absolute;
+      top:20px;
+      left:0;
+      background:rgba(0,0,40,0.95);
+      border:1px solid #00ffff30;
+      border-radius:10px;
+      min-width:180px;
+      text-align:left;
+      box-shadow:0 0 15px rgba(0,255,255,0.1);
+    }
+    
+    .dropdown-content a {
+      display:block;
+      padding:10px 15px;
+      color:#fff;
+      font-weight:500;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display:block;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      position:relative;
+      height:90vh;
+      background:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      text-align:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    #hero::after {
+      content:'';
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position:relative;
+      z-index:2;
+      padding:0 20px;
+      text-align:center;
+    }
+    .hero-content h1 {
+      font-size:2.6rem;
+      background:linear-gradient(90deg,#00ffff,#ff00cc);
+      -webkit-background-clip:text;
+      color:transparent;
+      text-shadow:0 0 20px rgba(255,255,255,0.3);
+    }
+    .hero-content p {
+      max-width:600px;
+      margin:15px auto;
+      color:#ddd;
+      font-size:1.1rem;
+    }
+    .cta-button {
+      display:inline-block;
+      background:linear-gradient(90deg,#00ffff,#ff00cc);
+      color:#000;
+      padding:12px 30px;
+      border-radius:50px;
+      font-weight:600;
+      text-decoration:none;
+      margin-top:20px;
+      transition:.3s;
+    }
+    .cta-button:hover {
+      transform:scale(1.05);
+      box-shadow:0 0 20px #00ffff;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    #about-site {
+      background:rgba(255,255,255,0.03);
+      padding:70px 20px;
+      text-align:center;
+    }
+    #about-site h2 {
+      font-size:2rem;
+      background:linear-gradient(90deg,#ff00cc,#00ffff);
+      -webkit-background-clip:text;
+      color:transparent;
+      margin-bottom:20px;
+    }
+    #about-site p {
+      max-width:850px;
+      margin:10px auto;
+      color:#ccc;
+      font-size:1rem;
+      line-height:1.7;
+    }
+
+    /* ===== TOOLS SECTION ===== */
+    section {
+      padding:70px 20px;
+      text-align:center;
+    }
+    h2 {
+      font-size:2rem;
+      margin-bottom:15px;
+      background:linear-gradient(90deg,#00ffff,#ff00cc);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+    p.section-subtitle {
+      color:#bbb;
+      margin-bottom:40px;
+    }
+    .tools-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+      max-width:1200px;
+      margin:auto;
+    }
+    .tool-card {
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:16px;
+      padding:25px;
+      transition:.4s;
+      box-shadow:0 0 20px rgba(0,255,255,0.05);
+    }
+    .tool-card:hover {
+      transform:translateY(-10px);
+      border-color:#00ffff;
+      box-shadow:0 0 30px rgba(0,255,255,0.3);
+    }
+    .tool-card img {
+      width:90px;
+      height:90px;
+      object-fit:contain;
+      background:#fff;
+      border-radius:12px;
+      padding:10px;
+      margin-bottom:15px;
+    }
+    .tool-card h3 {color:#fff;}
+    .tool-card p {color:#ccc; font-size:.95rem; min-height:60px;}
+    .tool-card a {
+      display:inline-block;
+      margin-top:12px;
+      color:#00ffff;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s;
+    }
+    .tool-card a:hover {text-shadow:0 0 8px #00ffff;}
+
+    /* ===== FOOTER ===== */
+    footer {
+      background:rgba(0,0,30,0.9);
+      text-align:center;
+      color:#bbb;
+      padding:40px 10px;
+      border-top:1px solid rgba(255,255,255,0.1);
+    }
+    footer a {color:#00ffff; text-decoration:none; margin:0 10px;}
+    footer a:hover {color:#fff; text-shadow:0 0 8px #00ffff;}
+
+    @media(max-width:768px){
+      .hero-content h1{font-size:1.9rem;}
+      .tools-grid{grid-template-columns:1fr;}
+      nav ul{gap:15px;}
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Simple Consent Banner -->
-    <div id="consent-banner">
-      <span>We use cookies to improve your experience and show personalized ads. By clicking "Consent", you agree to our use of cookies.</span>
-      <div>
-        <button onclick="handleConsent('accept'); document.getElementById('consent-banner').style.display='none';">Consent</button>
-        <button onclick="document.getElementById('consent-banner').style.display='none';">Manage</button>
-      </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="tools.html">AI Tools</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="dmcapolicypage.html">DMCA Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+
+       <li class="dropdown">
+  <a href="javascript:void(0)" class="dropbtn">Blogs ▾</a>
+  <ul class="dropdown-content" id="blogsDropdown">
+    <li><a href="article1.html">Top 10 AI Video Generators in 2025</a></li>
+    <li><a href="article2.html">Best Free AI Image Generators</a></li>
+    <li><a href="article3.html">AI Tools for Video Editing</a></li>
+    <li><a href="article4.html">AI Tools for Coding & Developers</a></li>
+    <li><a href="article5.html">Top AI Voice Changer Tools</a></li>
+    <li><a href="article6.html">AI Productivity Tools 2025</a></li>
+    <li><a href="article7.html">AI Tools for SEO Optimization</a></li>
+    <li><a href="article8.html">AI Design Tools You Should Try</a></li>
+    <li><a href="article9.html">AI Tools for YouTubers</a></li>
+    <li><a href="article10.html">Future of AI: Trends to Watch</a></li>
+  </ul>
+</li>
+
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Welcome to AI Tools Galaxy 🌌</h1>
+      <p>Discover the best free AI tools for writing, design, coding, and content creation — all in one place.</p>
+      <a href="tools.html" class="cta-button">Explore Tools</a>
+    </div>
+  </section>
+
+  <section id="about-site">
+    <h2>Welcome to AI Tools Galaxy</h2>
+    <p>
+      AI Tools Galaxy is your free hub for exploring cutting-edge AI platforms that boost creativity,
+      productivity, and innovation. Whether you’re a content creator, developer, or entrepreneur,
+      our curated list of tools helps you simplify your workflow and get smarter results.
+    </p>
+    <p>
+      We regularly review trending AI software like ChatGPT, Midjourney, and Gemini — offering insights,
+      features, and direct access links to help you find the right tool faster.
+    </p>
+  </section>
+
+  <section>
+    <h2>🔥 Featured AI Tools</h2>
+    <section>
+  <h2>📰 Latest AI Articles</h2>
+  <p class="section-subtitle">Read detailed guides and insights on AI tools, video creation, design, SEO, and productivity.</p>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="AI tools overview">
+      <h3>Top 10 Free AI Tools You Must Try in 2025</h3>
+      <p>Explore the most powerful and free AI tools for creators, developers, and designers this year.</p>
+      <a href="article1.html">Read More</a>
     </div>
 
-    <style>
-      #consent-banner {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: #000;
-        color: #fff;
-        padding: 15px;
-        z-index: 9999;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-      }
-      #consent-banner button {
-        margin-left: 10px;
-        padding: 8px 12px;
-        background: #ff9900;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 4px;
-      }
-    </style>
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="AI Image Generators">
+      <h3>Best Free AI Image Generators to Create Stunning Art</h3>
+      <p>Generate realistic or artistic images instantly using the best free AI image creators.</p>
+      <a href="article2.html">Read More</a>
+    </div>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <!-- Hero Section with Video Background -->
-        <section id="hero">
-            <video autoplay muted loop id="heroVideo">
-                <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-overlay">
-                <div class="hero-content">
-                    <i class="fas fa-rocket fa-5x" style="color: #ff00ff; animation: rocketLaunch 3s infinite;"></i>
-                    <h1>AI Tools Explosion! 💥</h1>
-                    <p>Watch the magic happen – likes, users, and online soaring!</p>
-                    <a href="tools.html" class="cta-button">Explore Now <i class="fas fa-bolt"></i></a>
-                    <button id="likeBtn" class="like-button"><i class="fas fa-heart"></i> Likes: <span id="likeCount">1200</span></button>
-                    <button id="shareBtn" class="share-button"><i class="fas fa-share"></i> Share</button>
-                </div>
-                <div id="particles"></div>
-            </div>
-        </section>
-        
-        <!-- Engagement Meter -->
-        <section id="engagement">
-            <h2>Engagement Level</h2>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
-            </div>
-            <p>Watch it rise as more people join!</p>
-        </section>
-        
-        <!-- Live Stats Section -->
-        <section id="stats">
-            <h2>Live Stats! 🔥</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <i class="fas fa-tools fa-3x" style="color: #ff00ff; animation: spin 2s infinite;"></i>
-                    <h3>1000+ Tools</h3>
-                    <p>Curated AI tools for every need.</p>
-                </div>
-                <div class="stat-card">
-                    <i class="fas fa-users fa-3x" style="color: #00ff00; animation: bounce 2s infinite;"></i>
-                    <h3>Users: <span id="userCount">1000000</span></h3>
-                    <p>Join a growing community.</p>
-                </div>
-                <div class="stat-card">
-                    <i class="fas fa-star fa-3x" style="color: #ffff00; animation: pulse 2s infinite;"></i>
-                    <h3>5-Star Rated</h3>
-                    <p>Trusted by creators worldwide.</p>
-                </div>
-                <div class="stat-card">
-                    <i class="fas fa-eye fa-3x" style="color: #0080ff;"></i>
-                    <h3>Online: <span id="onlineCount">500</span></h3>
-                    <p>Live users right now!</p>
-                </div>
-            </div>
-        </section>
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="AI Video Generators">
+      <h3>Top AI Video Generators for YouTube Shorts & Ads</h3>
+      <p>Discover advanced AI video makers for social media, marketing, and YouTube content.</p>
+      <a href="article3.html">Read More</a>
+    </div>
 
-        <!-- Featured Tools Carousel -->
-        <section id="featured-tools">
-            <h2>Featured AI Tools <i class="fas fa-fire" style="color: #ff5722; animation: flicker 1s infinite;"></i></h2>
-            <p>Swipe to discover – more coming soon!</p>
-            <div class="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="tool-card">
-                            <img src="https://cdn.openai.com/chatgpt/images/chatgpt-logo.png" alt="ChatGPT Logo" class="tool-image">
-                            <h3><a href="https://chat.openai.com/" target="_blank">ChatGPT (OpenAI) <i class="fas fa-external-link-alt"></i></a></h3>
-                            <p>Advanced AI chat & writing assistant.</p>
-                            <span class="tag trending">Trending</span>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="tool-card">
-                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Claude AI" class="tool-image">
-                            <h3><a href="https://claude.ai/" target="_blank">Claude (Anthropic) <i class="fas fa-external-link-alt"></i></a></h3>
-                            <p>Natural language reasoning & summarization.</p>
-                            <span class="tag">Smart</span>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="tool-card">
-                            <img src="https://images.unsplash.com/photo-1541963463532-d68292c34d19?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Midjourney Art" class="tool-image">
-                            <h3><a href="https://www.midjourney.com/" target="_blank">Midjourney <i class="fas fa-external-link-alt"></i></a></h3>
-                            <p>Text-to-image art generation.</p>
-                            <span class="tag creative">Creative</span>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="tool-card">
-                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="DALL·E 3" class="tool-image">
-                            <h3><a href="https://openai.com/dall-e-3/" target="_blank">DALL·E 3 (OpenAI) <i class="fas fa-external-link-alt"></i></a></h3>
-                            <p>Image generation & editing.</p>
-                            <span class="tag">Innovative</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-indicators">
-                    <span class="indicator active" data-slide="0"></span>
-                    <span class="indicator" data-slide="1"></span>
-                    <span class="indicator" data-slide="2"></span>
-                    <span class="indicator" data-slide="3"></span>
-                </div>
-            </div>
-        </section>
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="AI coding tools">
+      <h3>AI Tools for Coding & Developers</h3>
+      <p>Boost your coding workflow with tools like GitHub Copilot and ChatGPT Code Interpreter.</p>
+      <a href="article4.html">Read More</a>
+    </div>
 
-        <!-- Testimonial -->
-        <section id="testimonial">
-            <blockquote>
-                "Unbelievable! Counters keep climbing – share it now!" – <strong>Sam Lee, Enthusiast</strong>
-            </blockquote>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <h2>My Best Website</h2>
-                <p>Explore 1000+ Free & Trending AI Tools for creators, coders, and designers.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">🏠 Home</a></li>
-                    <li><a href="about.html">ℹ️ About</a></li>
-                    <li><a href="tools.html">🧠 Tools</a></li>
-                    <li><a href="contact.html">📞 Contact</a></li>
-                    <li><a href="privacy.html">🔒 Privacy</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="footer-newsletter">
-                <h3>Stay Updated</h3>
-                <form id="newsletterForm">
-                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 My Best Website. All Rights Reserved.</p>
-            <small>Designed for AdSense | Optimized by <a href="#">SEO Smart Engine</a></small>
-        </div>
-    </footer>
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="AI Voice Changers">
+      <h3>Top AI Voice Changer & TTS Tools</h3>
+      <p>Create lifelike voices for videos, podcasts, and games with these amazing AI TTS tools.</p>
+      <a href="article5.html">Read More</a>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/3184630/pexels-photo-3184630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="AI Productivity Tools">
+      <h3>Best AI Productivity Tools to Save Time & Work Smarter</h3>
+      <p>Boost efficiency and focus with smart AI-powered productivity assistants.</p>
+      <a href="article6.html">Read More</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/5720560/pexels-photo-5720560.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="AI SEO Tools">
+      <h3>AI Tools for SEO Optimization</h3>
+      <p>Optimize content, keywords, and backlinks with the latest AI SEO tools for 2025.</p>
+      <a href="article7.html">Read More</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/3861970/pexels-photo-3861970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="AI Design Tools">
+      <h3>Best AI Design Tools You Should Try</h3>
+      <p>Create logos, UI mockups, and brand visuals effortlessly using AI design platforms.</p>
+      <a href="article8.html">Read More</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/4145191/pexels-photo-4145191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="AI Tools for YouTubers">
+      <h3>Top AI Tools for YouTubers & Content Creators</h3>
+      <p>Perfect tools for video editing, thumbnails, scripts, and automation for YouTubers.</p>
+      <a href="article9.html">Read More</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://images.pexels.com/photos/5900165/pexels-photo-5900165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=600" alt="Future of AI 2025">
+      <h3>The Future of AI — Trends Every Creator Should Know</h3>
+      <p>What’s next for artificial intelligence? Explore trends, predictions, and future use cases.</p>
+      <a href="article10.html">Read More</a>
+    </div>
+  </div>
+</section>
+
+
+    <p class="section-subtitle">Explore the top AI tools transforming creativity, coding, and design.</p>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg">
+        <h3>ChatGPT</h3>
+        <p>Advanced AI for writing, brainstorming, and answering any question instantly.</p>
+        <a href="https://chat.openai.com/" target="_blank">Visit Tool</a>
+      </div>
+      <div class="tool-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg">
+        <h3>Claude AI</h3>
+        <p>Anthropic’s reasoning-based assistant for smart document understanding and summaries.</p>
+        <a href="https://claude.ai/" target="_blank">Visit Tool</a>
+      </div>
+      <div class="tool-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Midjourney_Emblem.svg">
+        <h3>Midjourney</h3>
+        <p>Create stunning AI art from text prompts — ideal for designers and digital artists.</p>
+        <a href="https://www.midjourney.com/" target="_blank">Visit Tool</a>
+      </div>
+      <div class="tool-card">
+        <img src="https://mma.prnewswire.com/media/2561848/Murf_AI_Logo.jpg">
+        <h3>Murf AI</h3>
+        <p>Generate realistic voiceovers for videos, ads, and presentations with lifelike quality.</p>
+        <a href="https://murf.ai/" target="_blank">Visit Tool</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AI Tools Galaxy | All Rights Reserved</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="tools.html">Tools</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="privacy.html">Privacy</a>
+    </p>
+  </footer>
 </body>
 </html>
